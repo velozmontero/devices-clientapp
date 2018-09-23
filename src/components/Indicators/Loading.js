@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Loading extends Component {
-  render() {
-    return (
-      <div className="loading-indicator">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    )
-  }
-}
+ const Loading = () =>  (
+  <div className="loading-indicator">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+)
+
+export default Loading;

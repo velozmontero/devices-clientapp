@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class NetworkActivity extends Component {
-  render() {
-    return this.props.show ? (
-      <div className="network-activity-indicator">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    ) : null
-  }
-}
+const NetworkActivity = (props) => props.show ? (
+  <div className="network-activity-indicator">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+) : null;
+
+export default NetworkActivity;

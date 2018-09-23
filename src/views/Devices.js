@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { DEVICES } from '../actions/DEVICES';
 import { connect } from 'react-redux';
 import { filter, sort } from '../methods';

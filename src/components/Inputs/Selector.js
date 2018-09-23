@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-// const uuidv1 = require('uuid/v1');
-
 class Selector extends Component{
   constructor(props){
     super(props);
