@@ -119,10 +119,9 @@ class Selector extends Component{
       },
 
       selectorContainer: {
-        padding: '0 10px',
         cursor: 'pointer',
         position: 'relative',
-        width: '235px',
+        width: '255px',
         height: '45px',
         display: 'flex',
         justifyContent: 'flex-start',
@@ -173,12 +172,18 @@ class Selector extends Component{
           style={styles.selectorContainer} 
           className={this.props.containerClassName}
         >
-          <div style={{
+          <div onClick={this.onFocus} style={{
             position: 'absolute',
-            right: 10,
+            right: 0,
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '5px',
           }}>
             <div style={{
-              margin: '3px',
+              margin: '2px',
               width: 0,
               height: 0,
               borderLeft: '6px solid transparent',
@@ -187,7 +192,7 @@ class Selector extends Component{
               borderBottomColor: this.state.focus ? '#5855ff' : '#000',
             }}></div>
             <div style={{
-              margin: '3px',
+              margin: '2px',
               width: 0,
               height: 0,
               borderLeft: '6px solid transparent',
@@ -204,7 +209,9 @@ class Selector extends Component{
             style={styles.select}
             className={this.props.selectorClassName}
           >
-            {this.props.value}
+            <div style={{
+              padding: '0px 10px'
+            }}>{this.props.value}</div>
           </div>
 
           <div ref={this.setWrapperRef} className="cool-scroll-bar-19" style={{
