@@ -42,9 +42,11 @@
           font-size: 20px;
           cursor: pointer;
           color: $text-color;
+          transition: transform 400ms;
 
           &:hover {
             color: $accent-color;
+            transform: scale(1.5);
           }
         }
       }

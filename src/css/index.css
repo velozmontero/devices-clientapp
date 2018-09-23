@@ -137,9 +137,11 @@ button:focus {
         .devices-view .devices-list-container .device .device-actions .icon {
           font-size: 20px;
           cursor: pointer;
-          color: #000; }
+          color: #000;
+          transition: transform 400ms; }
           .devices-view .devices-list-container .device .device-actions .icon:hover {
-            color: #ffeb3b; }
+            color: #ffeb3b;
+            transform: scale(1.5); }
   .devices-view .empty-list {
     height: 60px;
     display: flex;
