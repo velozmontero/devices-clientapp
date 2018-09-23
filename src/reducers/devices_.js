@@ -1,3 +1,4 @@
+// Set the fetched devices in the redux store
 const onFetchDevices = (state, action) => {
   return {
     ...state,
@@ -5,6 +6,7 @@ const onFetchDevices = (state, action) => {
   };
 };
 
+// Set the devices filtering option in the redux store
 const onFilterDevices = (state, action) => {
   return {
     ...state,
@@ -12,6 +14,7 @@ const onFilterDevices = (state, action) => {
   };
 };
 
+// Set the devices sorting option in the redux store
 const onSortDevices = (state, action) => {
   return {
     ...state,
@@ -19,14 +22,15 @@ const onSortDevices = (state, action) => {
   };
 };
 
+// Remove device from the redux store 
 const onRemoveDevice = (state, action) => {
-  console.log('filtering');
   return {
     ...state,
     list: state.list.filter(device => device.id !== action.device.id)
   };
 };
 
+// Save device form changes to the redux store
 const onFormChange = (state, action) => {
   return {
     ...state,
@@ -34,6 +38,7 @@ const onFormChange = (state, action) => {
   };
 }
 
+// Add device to the redux store and clear the form
 const onAddDevice = (state, action) => {
   return {
     ...state,
@@ -46,6 +51,7 @@ const onAddDevice = (state, action) => {
   };
 }
 
+// Update a device in the redux store
 const onUpdateDevice = (state, action) => {
   let list = JSON.parse(JSON.stringify(state.list));
 

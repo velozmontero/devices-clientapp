@@ -1,3 +1,4 @@
+// Function to validate a device object before sending request to api
 export const isValidDevice = (device) => {
   if (!device.system_name) {
     alert('Please enter a system name');

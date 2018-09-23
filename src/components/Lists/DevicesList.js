@@ -4,26 +4,13 @@ import { MdDelete } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 export default class DevicesList extends Component {
-  constructor(props) {
-    super(props);
-    this.devicesListContainer = React.createRef();
-  }
-
-  componentDidMount() {
-    const node = this.devicesListContainer.current;
-    // get scroll position in px
-    if (node) {
-      console.log(node.scrollLeft, node.scrollTop);
-    }
-  }
-
   render() {
     return !this.props.list.length ? (
       <div className="empty-list">
         No Devices Available
       </div>
     ) : (
-      <div className="devices-list-container" ref={this.devicesListContaineref}>
+      <div className="devices-list-container">
         {
           this.props.list.map(device => (
             <div className="device" key={device.id}>

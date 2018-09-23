@@ -12,9 +12,11 @@ import { Loading, NetworkActivity } from './components/Indicators';
 
 class Routes extends Component {
   componentDidMount() {
+    // Fetch all devices from the database
     this.props.onFetchDevices();
   }
   render() {
+    // Show the loading screen while waiting form the response from the api
     return this.props.indicators.loading ? <Loading /> : (
       <Router>
         <div>

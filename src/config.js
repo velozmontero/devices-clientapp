@@ -1,3 +1,4 @@
+// Filter options used for selector components
 export const device_filter_options = [
   {
     label: 'All',
@@ -17,6 +18,7 @@ export const device_filter_options = [
   },
 ]
 
+// Sorting options used for selector components
 export const device_sort_options = [
   {
     label: 'HDD Capacity',

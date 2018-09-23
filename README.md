@@ -1,6 +1,6 @@
 # CLIENT SIDE 
 
-1. Clone the repository from github
+1. Clone the repository
   $ git clone https://github.com/velozmontero/devices-clientapp.git 
 
 2. Install the dependencies
@@ -10,7 +10,6 @@
   $ npm start 
  
 4. On your browser go to http://localhost:3001
-
 
 # SERVER SIDE
 
@@ -23,9 +22,3 @@
           res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
           next();
         });
-
-2. Install the dependencies
-$ npm install
-
-3. Initialize the server
-$ npm start 

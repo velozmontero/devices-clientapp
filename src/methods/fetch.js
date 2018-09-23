@@ -1,3 +1,4 @@
+// Function to send fetch requests to the server
 const fetcher = (url, method, body) => fetch(
 url,
 {

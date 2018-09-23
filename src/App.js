@@ -4,6 +4,7 @@ import { createStore, combineReducers } from 'redux';
 import reducers from './reducers';
 import Routes from './routes';
 
+// Create redux store using our reducers
 const store = createStore(
   combineReducers({
     ...reducers

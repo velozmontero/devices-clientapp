@@ -1,3 +1,4 @@
+// Show or hide the loading screen
 const onLoadingChange = (state, action) => {
   return {
     ...state,
@@ -5,6 +6,7 @@ const onLoadingChange = (state, action) => {
   }
 }
 
+// Show or hide the activity indicator
 const onNetworkActivity = (state, action) => {
   return {
     ...state,

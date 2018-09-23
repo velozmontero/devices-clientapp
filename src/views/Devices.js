@@ -14,10 +14,12 @@ class Devices extends Component {
   };
 
   componentDidMount() {
+    // Sort and filter devices with the default values
     this.onSortFilter();
   }
 
   componentDidUpdate(prevProps) {
+    // Sort and filter devices if the filtering, sorting or list have been modified
     if (this.props.filterBy !== prevProps.filterBy || 
       this.props.sortBy !== prevProps.sortBy || 
       this.props.list !== prevProps.list) {
@@ -25,12 +27,11 @@ class Devices extends Component {
     }
   }
 
+  // Sort and filter the data using the values from the props and the methods iplemented in the methods folder
   onSortFilter = () => {
     const { list, filterBy, sortBy } = this.props;
     const filtered = device_filter_options[filterBy].value === 'ALL' ? list : filter(list, 'type', device_filter_options[filterBy].value);
     const sorted = sort(filtered, device_sort_options[sortBy].value);
-
-    console.log('filtering and sorting');
 
     this.setState({
       list: sorted

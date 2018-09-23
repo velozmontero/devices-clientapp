@@ -16,16 +16,20 @@ class Device extends Component {
   };
 
   componentDidMount() {
+    // Get the device depending on the route params id
     let device = this.props.list.find(device => device.id === this.props.match.params.id);
 
     if (device) {
+      // If device exists set it in the component state
       this.onDeviceChange(device);
     }
     else {
+      // If device does not exist navigate away to the devices view
       this.props.history.replace('/devices');
     }
   }
 
+  // Set device in the component state
   onDeviceChange = (device) => {
     this.setState({
       device: device
