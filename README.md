@@ -11,6 +11,8 @@
  
 4. On your browser go to http://localhost:3001
 
+5. To run tests type $ npm test
+
 # SERVER SIDE
 
 1. Make sure the server allows Cross-Origin comunication with your client server. Please add the following middleware to middlewares.js if it does not exist.
