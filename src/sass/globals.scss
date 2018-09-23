@@ -1,0 +1,45 @@
+$thin-font: 'Montserrat-thin', sans-serif;
+$light-font: 'Montserrat-Light', sans-serif;
+$regular-font: 'Montserrat-Regular', sans-serif;
+$bold-font: 'Montserrat-Bold', sans-serif;
+$black-font: 'Montserrat-Black', sans-serif;
+
+$primary-color: #5855ff;
+$secondary-color: #fff;
+$accent-color: #ffeb3b;
+$text-color: #000;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $light-font;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgba(0,0,0,0.05);
+
+    .icon {
+      color: $accent-color;
+    }
+  }
+}
+
+.icon {
+  font-size: 35px;
+  color: $secondary-color;
+  transition: background-color 500ms;
+}

@@ -1,0 +1,96 @@
+.devices-view {
+  overflow: hidden;
+
+  .sort-filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0px 0px;
+  }
+  .devices-list-container {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 600px;
+
+    .device {
+      overflow: hidden;
+      padding: 0px 15px;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $primary-color;
+      position: relative;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+
+      span {
+        font-family: $bold-font;
+      }
+
+      .device-actions {
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        .icon {
+          font-size: 20px;
+          cursor: pointer;
+          color: $text-color;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+      
+    }
+  }
+
+  .empty-list {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.add-device-view {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5855ff;
+
+  h1 {
+    font-family: $bold-font;
+    color: $secondary-color;
+  }
+
+  .link-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+  }
+}
+
+.device-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  margin: 0 auto;
+
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.75);
+}

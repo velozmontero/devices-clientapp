@@ -1,0 +1,10 @@
+.header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-family: $bold-font;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  padding: 10px;
+}

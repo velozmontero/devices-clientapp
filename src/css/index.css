@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Montserrat-Thin';
+  src: url(../fonts/Montserrat/Montserrat-Thin.ttf); }
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url(../fonts/Montserrat/Montserrat-Light.ttf); }
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf); }
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url(../fonts/Montserrat/Montserrat-Bold.ttf); }
+@font-face {
+  font-family: 'Montserrat-Black';
+  src: url(../fonts/Montserrat/Montserrat-Black.ttf); }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat-Light", sans-serif; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none; }
+
+.link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%; }
+  .link-icon:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+    .link-icon:hover .icon {
+      color: #ffeb3b; }
+
+.icon {
+  font-size: 35px;
+  color: #fff;
+  transition: background-color 500ms; }
+
+.loading-indicator {
+  z-index: 999999;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5855ff; }
+  .loading-indicator div {
+    height: 25px;
+    width: 15px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 10px;
+    animation: loading 800ms infinite alternate-reverse; }
+  .loading-indicator div:nth-child(2) {
+    animation-delay: 200ms; }
+  .loading-indicator div:nth-child(3) {
+    animation-delay: 400ms; }
+  .loading-indicator div:nth-child(4) {
+    animation-delay: 600ms; }
+
+.network-activity-indicator {
+  z-index: 999999;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .network-activity-indicator div {
+    height: 15px;
+    width: 10px;
+    background-color: #000;
+    margin: 3px;
+    border-radius: 5px;
+    animation: indicator 900ms ease infinite alternate-reverse; }
+  .network-activity-indicator div:nth-child(2) {
+    animation-delay: 300ms; }
+  .network-activity-indicator div:nth-child(3) {
+    animation-delay: 600ms; }
+
+@keyframes loading {
+  from {
+    height: 25px; }
+  to {
+    height: 65px; } }
+@keyframes indicator {
+  from {
+    height: 15px; }
+  to {
+    height: 45px; } }
+.header {
+  background-color: #5855ff;
+  color: #fff;
+  font-family: "Montserrat-Bold", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  padding: 10px; }
+
+.devices-view {
+  overflow: hidden; }
+  .devices-view .sort-filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0px 0px; }
+  .devices-view .devices-list-container {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 600px; }
+    .devices-view .devices-list-container .device {
+      overflow: hidden;
+      padding: 0px 15px;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #5855ff;
+      position: relative; }
+      .devices-view .devices-list-container .device:hover {
+        background-color: #5855ff;
+        color: #fff; }
+      .devices-view .devices-list-container .device span {
+        font-family: "Montserrat-Bold", sans-serif; }
+      .devices-view .devices-list-container .device .device-actions {
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+        .devices-view .devices-list-container .device .device-actions .icon {
+          font-size: 20px;
+          cursor: pointer;
+          color: #000; }
+          .devices-view .devices-list-container .device .device-actions .icon:hover {
+            color: #ffeb3b; }
+  .devices-view .empty-list {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.add-device-view {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5855ff; }
+  .add-device-view h1 {
+    font-family: "Montserrat-Bold", sans-serif;
+    color: #fff; }
+  .add-device-view .link-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px; }
+
+.device-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  margin: 0 auto;
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.75); }
+
+/*# sourceMappingURL=index.css.map */
