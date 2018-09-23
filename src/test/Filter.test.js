@@ -33,7 +33,7 @@ const arr = [
   }
 ];
 
-const result = [
+const type_MAC_result = [
   {
     "id": "Th3ngERn9",
     "system_name": "MAC-LEADER",
@@ -48,6 +48,38 @@ const result = [
   }
 ];
 
+const type_WINDOWS_WORKSTATION_result = [
+  {
+    "id": "e8okoP2l5",
+    "system_name": "DESKTOP-SMART",
+    "type": "WINDOWS_WORKSTATION",
+    "hdd_capacity": "10"
+  },
+  {
+    "id": "e7ocoQ2n3",
+    "system_name": "MIGUEL-PC",
+    "type": "WINDOWS_WORKSTATION",
+    "hdd_capacity": "500"
+  },
+];
+
+const type_WINDOWS_SERVER_result = [
+  {
+    "id": "Q1JdBnE12",
+    "system_name": "ARMANDO-SERVER",
+    "type": "WINDOWS_SERVER",
+    "hdd_capacity": "256"
+  },
+];
+
 test('filters array by type MAC', () => {
-  expect(filter(arr, 'type', 'MAC')).toEqual(result);
+  expect(filter(arr, 'type', 'MAC')).toEqual(type_MAC_result);
+});
+
+test('filters array by type WINDOWS_WORKSTATION', () => {
+  expect(filter(arr, 'type', 'WINDOWS_WORKSTATION')).toEqual(type_WINDOWS_WORKSTATION_result);
+});
+
+test('filters array by type WINDOWS_SERVER', () => {
+  expect(filter(arr, 'type', 'WINDOWS_SERVER')).toEqual(type_WINDOWS_SERVER_result);
 });
