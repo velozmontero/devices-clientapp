@@ -2,7 +2,7 @@ import { server } from '../api';
 import { fetcher } from '../methods';
 import { isValidDevice } from '../methods/validate';
 
-export const DEVICES = (dispatch) => ({
+export const DEVICES = dispatch => ({
   // Send a GET request to fetch all devices from the api
   onFetchDevices: async () => {
     let list = await fetcher(server + '/devices');

@@ -1,24 +1,22 @@
 // Show or hide the loading screen
-const onLoadingChange = (state, action) => {
-  return {
-    ...state,
-    loading: action.loading,
-  }
-}
+const onLoadingChange = (state, { loading }) => ({
+  ...state,
+  loading
+})
 
 // Show or hide the activity indicator
-const onNetworkActivity = (state, action) => {
-  return {
-    ...state,
-    networkActivity: action.networkActivity,
-  }
-}
+const onNetworkActivity = (state, { networkActivity }) => ({
+  ...state,
+  networkActivity
+})
+
+const initialState = () => ({
+  loading: true,
+  networkActivity: false
+})
 
 const indicators = (
-  state = {
-    loading: true,
-    networkActivity: false
-  },
+  state = initialState(),
   action) => {
   switch (action.type) {
     case 'ON_LOADING_CHANGE':

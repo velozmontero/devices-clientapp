@@ -1,63 +1,52 @@
 // Set the fetched devices in the redux store
-const onFetchDevices = (state, action) => {
-  return {
-    ...state,
-    list: action.list
-  };
-};
+const onFetchDevices = (state, { list }) => ({
+  ...state,
+  list
+});
 
 // Set the devices filtering option in the redux store
-const onFilterDevices = (state, action) => {
-  return {
-    ...state,
-    filterBy: action.filterBy
-  };
-};
+const onFilterDevices = (state, { filterBy }) => ({
+  ...state,
+  filterBy
+});
 
 // Set the devices sorting option in the redux store
-const onSortDevices = (state, action) => {
-  return {
-    ...state,
-    sortBy: action.sortBy
-  };
-};
+const onSortDevices = (state, { sortBy }) => ({
+  ...state,
+  sortBy
+});
 
 // Remove device from the redux store 
-const onRemoveDevice = (state, action) => {
-  return {
-    ...state,
-    list: state.list.filter(device => device.id !== action.device.id)
-  };
-};
+const onRemoveDevice = (state, { device }) => ({
+  ...state,
+  list: state.list.filter(node => node.id !== device.id)
+});
 
 // Save device form changes to the redux store
-const onFormChange = (state, action) => {
-  return {
-    ...state,
-    form: action.form
-  };
-}
+const onFormChange = (state, { form }) => ({
+  ...state,
+  form
+});
 
 // Add device to the redux store and clear the form
-const onAddDevice = (state, action) => {
-  return {
-    ...state,
-    list: state.list.concat([action.device]),
-    form: {
-      system_name: '',
-      type: '',
-      hdd_capacity: ''
-    },
-  };
-}
+const onAddDevice = (state, { device }) => ({
+  ...state,
+  list: state.list.concat([device]),
+  form: {
+    system_name: '',
+    type: '',
+    hdd_capacity: ''
+  },
+});
+
 
 // Update a device in the redux store
-const onUpdateDevice = (state, action) => {
+const onUpdateDevice = (state, { device }) => {
   let list = JSON.parse(JSON.stringify(state.list));
 
   for (var i = 0; i < list.length; i++) {
-    if (list[i].id === action.device.id) {
-      list[i] = action.device;
+    if (list[i].id === device.id) {
+      list[i] = device;
 
       return {
         ...state,
@@ -67,18 +56,20 @@ const onUpdateDevice = (state, action) => {
   }
 }
 
+const initialState = () => ({
+  filterBy: 0,
+  sortBy: 0,
+  list: [],
+  form: {
+    system_name: '',
+    type: '',
+    hdd_capacity: ''
+  },
+  selected: null
+})
+
 const devices = (
-  state = {
-    filterBy: 0,
-    sortBy: 0,
-    list: [],
-    form: {
-      system_name: '',
-      type: '',
-      hdd_capacity: ''
-    },
-    selected: null
-  }, 
+  state = initialState(), 
   action) => {
   switch (action.type) {
     case 'ON_FETCH_DEVICES':

@@ -9,8 +9,6 @@ url,
   body: body ? JSON.stringify(body) : undefined
 })
 .then(response => response.json())
-.catch(err => {
-  console.error(err);
-})
+.catch(err => console.error(err))
 
 export default fetcher;

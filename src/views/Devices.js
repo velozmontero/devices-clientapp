@@ -97,8 +97,6 @@ const mapStateToProps = (state, ownProps) => {
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return DEVICES(dispatch);
-}
+const mapDispatchToProps = (dispatch) => DEVICES(dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Devices);
